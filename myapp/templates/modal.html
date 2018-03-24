@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>modal</title>
+        <meta charset="UTF-8">
+        <link href="static/modal_styles.css" rel="stylesheet" type="text/css">
+    </head>
+    <body>
+        <div class="modal-background">
+        <div class="modal-dialog">
+          <div class="modal-header">
+            <label class="modal-title">Welcome!</label>
+          </div>
+        <div class="modal-content">
+            <h4>What is your name?</h4>
+            <form>
+                <input type="text" name="name" placeholder="Your name" method="get">
+                <input type="submit" value="OK"> 
+            </form>
+            </div>
+        </div>
+    </div>
+        <div>{% block content %}{% endblock %}</div>
+    </body>
+    </html>
