@@ -1,3 +1,4 @@
+import os
 import tornado.ioloop
 import tornado.web
 from jinja2 import \
@@ -45,5 +46,6 @@ def make_app():
 
 if __name__ == "__main__":
     app = make_app()
-    app.listen(2000)
+    PORT = int(os.environ.get('PORT', '2000'))
+    app.listen(PORT)
     tornado.ioloop.IOLoop.current().start()
