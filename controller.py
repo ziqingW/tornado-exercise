@@ -1,6 +1,14 @@
 import os
 import tornado.ioloop
 import tornado.web
+import boto3
+
+client = boto3.client(
+  'ses', region="us-east-1",
+  aws_access_key_id=os.environ.get('AWS_ACCESS_KEY'),
+  aws_secret_access_key=os.environ.get('AWS_SECRET_KEY')
+)
+
 from jinja2 import \
     Environment, PackageLoader, select_autoescape
 
