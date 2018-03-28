@@ -1,14 +1,7 @@
 import os
 import tornado.ioloop
 import tornado.web
-import boto3
-
-client = boto3.client(
-  'ses', region="us-east-1",
-  aws_access_key_id=os.environ.get('AWS_ACCESS_KEY'),
-  aws_secret_access_key=os.environ.get('AWS_SECRET_KEY')
-)
-
+import tornado.log
 from jinja2 import \
     Environment, PackageLoader, select_autoescape
 
@@ -53,7 +46,9 @@ def make_app():
         autoreload=True)
 
 if __name__ == "__main__":
+    tornado.log.enable_pretty_logging()
     app = make_app()
     PORT = int(os.environ.get('PORT', '2000'))
     app.listen(PORT)
+    print('starting...')
     tornado.ioloop.IOLoop.current().start()
