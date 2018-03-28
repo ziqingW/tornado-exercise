@@ -18,7 +18,7 @@ class MainHandler(TemplateHandler):
     def get(self):
         self.set_header('Cache-Control',
       'no-store, no-cache, must-revalidate, max-age=0')
-        self.render_template("modal.html", {})
+        self.render_template("main.html", {})
 
 class NameHandler(TemplateHandler):
     def get(self):
