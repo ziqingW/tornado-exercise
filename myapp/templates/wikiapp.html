@@ -9,53 +9,45 @@
   <title>WikiApp</title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
   <link rel="stylesheet" href="/static/css/wikiapp.css" type="text/css">
-
 </head>
-
-
 <body>
   <header>
     <div class="container">
       <div class="col-xs-12 text-center">
-
         <h1><i>World is always amazing</i></h1>
-
       </div>
     </div>
   </header>
-  
   <section>
     <div class="container">
-      <div class="text-center">
-        <div>
+      <div class="row">
+      <div class="text-center col-12">
           <input type="text" id="search" placeholder="Anything you want" />
-          <button class="btn btn-primary">Find</button>
-
+          </div>
+          </div>
+          <div class="button-control">
+          <button class="btn btn-primary" id="search-button">Search</button>
 
           <a href="https://en.wikipedia.org/wiki/Special:Random" target="_blank">
-            <img title="I feel lucky" id="lucky" src="http://gallery.yopriceville.com/var/resizes/Free-Clipart-Pictures/Valentine%27s-Day-PNG/Hearts_Clover_PNG_Clipart_Picture.png?m=1399672800" />
+            <button class="btn btn-secondary">I feel lucky
+            <img alt="I feel lucky" src="/static/images/Hearts_Clover.png" />
+            </button>
           </a>
-        </div>
+          
+
       </div>
-    </div>
-
+      </div>
   </section>
-
+  <br>
+  <hr/>
   <div class="container" id="items">
   </div>
-
-
   <footer class="container">
     <div class="text-center"><strong>Created by <a href="https://www.linkedin.com/in/ziqing-wang-34549537/"><i>Ziqing</i></strong></a>
     </div>
   </footer>
-<script
-  src="https://code.jquery.com/jquery-3.3.1.min.js"
-  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-  crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-   <script src="/static/js/wikiapp.js"></script>
+  <script src="/static/js/wikiapp.js"></script>
 </body>
-
-
 </html>
