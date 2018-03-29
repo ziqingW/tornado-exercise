@@ -28,12 +28,15 @@ header span, .fa-smile{
     font-family: 'Bree Serif', serif;
 }
 .myapp img{
-    width: 100%;
+    width: 90%;
     border: 2px solid black;
     border-radius: 20px;
     box-shadow: 2px 2px 2px black;
     margin-bottom: 8%;
-    
+    margin-left: 4%;
+}
+.myapp a{
+   text-align: center; 
 }
 footer{
     background-color: #3794f2;

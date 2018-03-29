@@ -10,10 +10,10 @@ $(document).ready(function(){
   var seq=0;
   var loop;
   var crazy=0;
-  var gsd=new Audio("https://s3.amazonaws.com/freecodecamp/simonSound1.mp3");
-  var rsd=new Audio("https://s3.amazonaws.com/freecodecamp/simonSound2.mp3");
-  var ysd=new Audio("https://s3.amazonaws.com/freecodecamp/simonSound3.mp3");
-  var bsd=new Audio("https://s3.amazonaws.com/freecodecamp/simonSound4.mp3");
+  var gsd=new Audio("../sounds/simonSound1.mp3");
+  var rsd=new Audio("../sounds/simonSound2.mp3");
+  var ysd=new Audio("../sounds/simonSound3.mp3");
+  var bsd=new Audio("../sounds/simonSound4.mp3");
  //random 
   function getRandom(min, max){
     min = Math.ceil(min);

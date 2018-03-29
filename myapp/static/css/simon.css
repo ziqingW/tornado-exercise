@@ -1,4 +1,4 @@
-body{background-image: url(http://wallpapercave.com/wp/FjnZ25X.jpg);
+body{background-image: url("../images/simonbackground.jpg");
   background-size:cover;
 }
 
@@ -114,7 +114,7 @@ button:active{
   top: 100px; 
   border-radius: 100%;
   z-index:3;
-  background-image: url(http://orig06.deviantart.net/dae5/f/2008/287/8/9/black_texture___ray_by_ethenyl.jpg);
+  background-image: url("../images/black_texture.jpg");
 }
 
 #logo{color: white;
@@ -139,7 +139,7 @@ footer{font-family: 'Satisfy', cursive;
   left:0px;
   top:0px;
   border-top-left-radius:100%;
-  background-image: url(https://il9.picdn.net/shutterstock/videos/5256728/thumb/1.jpg);
+  background-image: url("../images/green_button.jpg");
   z-index:1;
   
 }
@@ -171,7 +171,7 @@ footer{font-family: 'Satisfy', cursive;
   right:0px;
   bottom:0px;
   border-bottom-right-radius: 100%;
-  background-image: url(http://wallpapercave.com/wp/Hvtxo6m.jpg);
+  background-image: url("../images/blue_button.jpg");
   z-index:1;
 }
 #switch{z-index: 4;
