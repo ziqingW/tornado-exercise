@@ -19,7 +19,7 @@ header{
     border: 2px solid black;
     border-radius: 10px;
 }
-header span{
+header span, .fa-smile{
     color: #d35a21;
 }
 .myapp h4{
@@ -46,11 +46,16 @@ footer{
 }
 footer a{
     color: white;
-    font-size: 1.6em;
+    font-size: 3em;
 }
 .footer-col{
     text-align: center;
 }
 .fa-envelope{
     color: #40e534;
+}
+footer h5,h6{
+    font-size: 1.2em;
+    color: black;
+    text-shadow: 1px 1px 1px silver;
 }

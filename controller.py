@@ -33,12 +33,17 @@ class MainHandler(TemplateHandler):
 class TicHandler(TemplateHandler):
     def get(self):
         self.render_template("tictactoe.html", {})
+        
+class WikiHandler(TemplateHandler):
+    def get(self):
+        self.render_template("wikiapp.html", {})        
 
 def make_app():
     return tornado.web.Application([
         (r"/", WelcomeHandler),
         (r"/main", MainHandler),
         (r"/tictactoe", TicHandler),
+        (r"/wikiapp", WikiHandler),
         (r"/static/(.*)", tornado.web.StaticFileHandler,
         {'path': 'myapp/static'})
         ],
