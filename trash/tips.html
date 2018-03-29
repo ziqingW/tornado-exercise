@@ -1,0 +1,27 @@
+{% extends "main.html" %}
+{% block content %}
+<form method="POST" action="/main/tips">
+                <h5>Tips calculator</h5>
+                <label for="bill">Total bill</label>
+                <input id="bill" type="number" name="bill" placeholder="0" required>
+                <p>Service level</p>
+                <select id="service" name="service">
+                    <option value="great">Great</option>
+                    <option value="good">Good</option>
+                    <option value="fair" selected="selected">Fair</option>
+                    <option value="bad">Bad</option>
+                    <option value="ruined">Ruined</option>
+                    </select>
+                    <button type="submit">OK</button>
+            </form>
+
+
+
+
+
+<h6>Bill: ${{ bill }}</h6>
+<h6>Service: {{ service }}</h6>
+<hr/>
+<p>Tips: ${{ tips }}</p>
+<p>Total: ${{ total  }}</p>
+{% endblock %}

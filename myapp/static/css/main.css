@@ -1,0 +1,56 @@
+header h1{
+    font-family: 'Chicle', cursive;
+    margin-top: 1%;
+    padding-top: 1%;
+    font-size: 3em;
+    text-shadow: 1px 1px 1px white;
+    }
+header h2{
+    font-family: 'Bree Serif', serif;
+    font-size: 1.6em;
+    padding-bottom: 1%;
+    color: white;
+    text-shadow: 1px 1px 1px black;
+}
+.title-back{
+    background-color: #3794f2;
+}
+header{
+    border: 2px solid black;
+    border-radius: 10px;
+}
+header span{
+    color: #d35a21;
+}
+.myapp h4{
+    text-align: center;
+    font-size: 1.6em;
+    font-family: 'Bree Serif', serif;
+}
+.myapp img{
+    width: 100%;
+    border: 2px solid black;
+    border-radius: 20px;
+    box-shadow: 2px 2px 2px black;
+    margin-bottom: 8%;
+    
+}
+footer{
+    background-color: #3794f2;
+    border: 2px solid black;
+    border-radius: 10px;
+    font-size: 1em;
+    font-family: 'Chicle', cursive;
+    padding-top: 1em;
+    padding-bottom: 0.5em;
+}
+footer a{
+    color: white;
+    font-size: 1.6em;
+}
+.footer-col{
+    text-align: center;
+}
+.fa-envelope{
+    color: #40e534;
+}

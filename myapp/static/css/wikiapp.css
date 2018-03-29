@@ -1,0 +1,59 @@
+h1 {
+  margin-top:10px;
+  font-family: Cursive;
+  font-size: 3rem;
+  color: orange;
+}
+
+body {
+  background-image: url("http://www.teamip.com/wp-content/uploads/2015/11/Dark-Grey-Background-High-Resolution-Photo-isk6e-Free.png");
+}
+
+section {
+  margin-top: 2rem;
+  font-family: Cursive;
+}
+
+#search {
+  border: 0.2rem solid skyblue;
+  border-radius: 5rem;
+  padding-left: 1rem;
+}
+
+#search:focus {
+  outline: none;
+  border: 0.5rem solid darkorange;
+  box-shadow: 0 0 1rem;
+}
+
+img {
+  width: 6rem;
+  height: 6rem;
+  margin-left: 3rem;
+}
+
+footer {
+  font-family: Arial;
+  color: white;
+  margin-top: 10rem;
+}
+
+.title {
+  color: darkorange;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.content {
+  color: white;
+}
+
+.result {
+  margin-top: 0.5rem;
+  border: 0.2rem solid white;
+  border-radius: 3rem;
+  padding: 1rem;
+}
+
+.result:hover {
+  border: 0.25rem solid dodgerblue;
+}

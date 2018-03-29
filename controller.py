@@ -14,32 +14,31 @@ class TemplateHandler(tornado.web.RequestHandler):
         template = ENV.get_template(tpl)
         self.write(template.render(**context))
         
+    def get(self):
+        self.set_header('Cache-Control',
+      'no-store, no-cache, must-revalidate, max-age=0')
+        
+class WelcomeHandler(TemplateHandler):
+    def get(self):
+        self.render_template("welcome.html", {})
+
 class MainHandler(TemplateHandler):
     def get(self):
-        self.set_header('Cache-Control',
-      'no-store, no-cache, must-revalidate, max-age=0')
-        self.render_template("main.html", {})
-
-class NameHandler(TemplateHandler):
-    def get(self):
-        self.set_header('Cache-Control',
-      'no-store, no-cache, must-revalidate, max-age=0')
-        name = self.get_query_argument('name', 'Cool guy')
+        name = self.get_query_argument('name', default='Cool guy')
         context = {
             'name': name
         }
-        self.render_template("name.html", context)
+        self.render_template("main.html", context)
 
-class AnotherHandler(TemplateHandler):
-    def get(self, name):
-        self.set_header('Cache-Control',
-      'no-store, no-cache, must-revalidate, max-age=0')
-        self.write("Hello, {}".format(name))
-    
+class TicHandler(TemplateHandler):
+    def get(self):
+        self.render_template("tictactoe.html", {})
+
 def make_app():
     return tornado.web.Application([
-        (r"/", NameHandler),
-        (r"/name/(.*)", AnotherHandler),
+        (r"/", WelcomeHandler),
+        (r"/main", MainHandler),
+        (r"/tictactoe", TicHandler),
         (r"/static/(.*)", tornado.web.StaticFileHandler,
         {'path': 'myapp/static'})
         ],

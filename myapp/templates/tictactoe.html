@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TicTacToe</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<link href="https://fonts.googleapis.com/css?family=Baloo" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
+<link href="/static/css/tictactoe_styles.css" rel="stylesheet" type="text/css">
+</head>
+<body>   
+  <div id="modal">
+     <div class="modal-content">
+     <div class="text-center">
+       <p id="yell"></p>
+       <p>Choose your side</p></div>
+       <div id="sides" class="row">
+         <button id="xx"><img class="picbutton" src="/static/images/x23.png"/></button>
+         <button id="oo"><img  class="picbutton" src="/static/images/o10.png"/></button>
+       </div>
+     </div>
+   </div>
+  
+ <div class="container">
+   <header class="text-center">
+     Tic-Tac-Toe
+   </header>
+
+   <div id="parent" ><span id="reset">Reset</span>
+     <div id="score1">Human<h6 id="s1"></h6></div>
+     <div id="score2">AI<h6 id="s2"></h6></div>
+   
+   </div>
+   <table class="text-center" id="tiles">
+     <tr>
+       <td><div id="t1" class="tile"></div></td>
+       <td><div id="t2" class="tile"></div></td>
+       <td><div id="t3" class="tile"></div></td>
+     </tr>
+       <tr>
+       <td><div id="t4" class="tile"></div></td>
+       <td><div id="t5" class="tile"></div></td>
+       <td><div id="t6" class="tile"></div></td>
+     </tr>
+         <tr>
+       <td><div id="t7" class="tile"></div></td>
+       <td><div id="t8" class="tile"></div></td>
+       <td><div id="t9" class="tile"></div></td>
+     </tr>
+   </table>
+   <br>
+   <footer class="text-center"> Designed By <a href="https://www.facebook.com/ziqing.wang.56" target="_blank">Ziqing</a></footer>
+   </div>
+   <script
+  src="https://code.jquery.com/jquery-3.3.1.slim.js"
+  integrity="sha256-fNXJFIlca05BIO2Y5zh1xrShK3ME+/lYZ0j+ChxX2DA="
+  crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+   <script src="/static/js/tictactoe.js"></script>
+  </body>
+</html>
