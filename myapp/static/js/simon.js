@@ -10,10 +10,10 @@ $(document).ready(function(){
   var seq=0;
   var loop;
   var crazy=0;
-  var gsd=new Audio("../sounds/simonSound1.mp3");
-  var rsd=new Audio("../sounds/simonSound2.mp3");
-  var ysd=new Audio("../sounds/simonSound3.mp3");
-  var bsd=new Audio("../sounds/simonSound4.mp3");
+  var gsd=new Audio("/static/sounds/simonSound1.mp3");
+  var rsd=new Audio("/static/sounds/simonSound2.mp3");
+  var ysd=new Audio("/static/sounds/simonSound3.mp3");
+  var bsd=new Audio("/static/sounds/simonSound4.mp3");
  //random 
   function getRandom(min, max){
     min = Math.ceil(min);
@@ -48,15 +48,19 @@ $(document).ready(function(){
   //simon says
   function simonsay(key){
       if(key==1){
+        gsd.load();
         gsd.play();
         blink("#greenb");
       }else if(key==2){
+        rsd.load();
         rsd.play();
         blink("#redb");
       }else if(key==3){ 
+        ysd.load();
         ysd.play();
         blink("#yellowb");
       }else if(key==4){
+        bsd.load();
         bsd.play();
         blink("#blueb");
       }
@@ -79,6 +83,7 @@ $(document).ready(function(){
     $(btn).click(function(){
     var kk=btn+"b";
         blink(kk);
+        snd.load();
         snd.play();
       if(kk=="#greenb"){
         num=1;

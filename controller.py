@@ -41,6 +41,13 @@ class WikiHandler(TemplateHandler):
 class SimonHandler(TemplateHandler):
     def get(self):
         self.render_template("simon.html", {})
+        
+class MailHandler(TemplateHandler):
+    def get(self):
+        self.render_template("mailmodal.html", {})
+        
+    def post(self):
+        pass
 
 def make_app():
     return tornado.web.Application([
@@ -49,6 +56,7 @@ def make_app():
         (r"/tictactoe", TicHandler),
         (r"/wikiapp", WikiHandler),
         (r"/simonsays", SimonHandler),
+        (r"/mailmodal", MailHandler),
         (r"/static/(.*)", tornado.web.StaticFileHandler,
         {'path': 'myapp/static'})
         ],

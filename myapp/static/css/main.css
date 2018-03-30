@@ -62,3 +62,8 @@ footer h5,h6{
     color: black;
     text-shadow: 1px 1px 1px silver;
 }
+body{
+    background-image: url("../images/silver-background.jpg");
+    background-size: cover;
+    position: relative;
+}

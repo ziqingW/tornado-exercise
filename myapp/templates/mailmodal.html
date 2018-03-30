@@ -1,0 +1,42 @@
+{% extends "main.html" %} 
+{% block head %}
+<link href="/static/css/mail.css" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+{% endblock %}
+{% block modal %}
+<div class="mail-background">
+<div class="mail-body">
+    <div class="text-center mail-header">
+        <h4>Write to Ziqing</h4>
+        </div>
+        <form class="mail-title">
+            <div class="form-input container">
+        <label for="mail-name">Name</label>    
+        <input type="text" id="mail-name" name="mail-name">
+        </div>
+            <div class="form-input container">
+        <label for="mail-title">Subject</label>    
+        <input type="text" id="mail-title" name="mail-title">
+        </div>
+        <br>
+        <div class="form-area container">
+        <label for="">Contents</label>
+        <textarea rows="4" name="contents"> </textarea>
+        </div>
+        <div class="form-rating text-center">
+        <label for="rating">How do you like my site?</label>
+        <select id="rating">
+            <option value="I Like it" selected>I like it</option>
+            <option value="It's OK">It's OK</option>
+            <option value="Hate it">Hate it</option>
+        </select>
+        </div>
+        <div class="mail-button">
+            <button class="btn btn-primary" type="submit" method="POST" action="/mailsuccess">Send</button>
+            <button class="btn btn-secondary" action="/main">Cancel</button>
+        </div>
+        </form>
+        </div>
+        </div>
+
+{% endblock %}
