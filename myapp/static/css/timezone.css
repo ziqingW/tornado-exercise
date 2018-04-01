@@ -1,0 +1,39 @@
+body {
+    justify-content: center;
+    display: flex;
+    background-image: url(../images/clock.jpg);
+    background-size: cover;
+}
+.form-background {
+    background-color: rgba(255, 255, 229, 0.8);
+    border: 3px solid white;
+    margin-top: 2em;
+    border-radius: 25px;
+    min-width: 360px;
+}
+form h3{
+    padding-top: 0.5em;
+}
+form p {
+    font-size: 1.2em;
+    padding-top: 0.5em;
+}
+form input {
+   border: 1px solid blue; 
+   border-radius: 5px;
+   padding-left: 0.5em;
+}
+.button-panel {
+    display: flex;
+    justify-content: center;
+}
+.btn {
+    border: 2px solid black;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    font-size: 1em;
+    box-shadow: 1px 1px 1px black;
+}
+.result-panel h6{
+    font-size: 1.2em;
+}

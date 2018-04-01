@@ -3,6 +3,10 @@ import tornado.ioloop
 import tornado.web
 import tornado.log
 import boto3
+from datetime import datetime
+from pytz import timezone
+import pytz
+
 from jinja2 import \
     Environment, PackageLoader, select_autoescape
 
@@ -49,8 +53,22 @@ class TimeZoneHandler(TemplateHandler):
         super().get()
         self.render_template("timezone.html", {})
         
+    def time_converter(self, localTime, localZone, destinationZone):
+        fmt = '%Y-%m-%d %H:%M'
+        loc_zone = timezone(localZone)
+        des_zone = timezone(destinationZone)
+        t = loc_zone.localize(datetime.strptime(localTime, fmt))
+        t.astimezone(pytz.UTC)
+        return t.astimezone(des_zone).strftime(fmt)
+
     def post(self):
-        pass
+            local_date = self.get_body_argument('date', None)
+            local_time = self.get_body_argument('time', None)
+            local_zone = self.get_body_argument('local-timezone', None)
+            local_datetime = "{} {}".format(local_date, local_time)
+            destin_zone = self.get_body_argument('destin-timezone', None)
+            destin_time = self.time_converter(local_datetime, local_zone, destin_zone)
+            self.render_template("timezone_result.html", {'origintime': "{} {}".format(local_datetime, local_zone),'destintime': "{} {}".format(destin_time, destin_zone)})
 
 class MailformHandler(TemplateHandler):
     def get(self):
@@ -104,7 +122,7 @@ def make_app():
         (r"/(tictactoe)", PageHandler),
         (r"/(wikiapp)", PageHandler),
         (r"/(simonsays)", PageHandler),
-        (r"/(timezone)", PageHandler),
+        (r"/timezone", TimeZoneHandler),
         (r"/mailform", MailformHandler),
         (r"/static/(.*)", tornado.web.StaticFileHandler,
         {'path': 'myapp/static'})
