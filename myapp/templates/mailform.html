@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>mailform</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="/static/css/mailform.css" rel="stylesheet" type="text/css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+</head>
+<body>
+<div class="mail-background">
+        <div class="mail-body">
+            <div class="text-center mail-header">
+                <h4>Write to Ziqing</h4>
+            </div>
+            <form class="mail-title" method="POST">
+                <div class="form-input container">
+                    <label for="mail-name">Name</label>
+                    <input type="text" id="mail-name" name="mail-name" required>
+                </div>
+                <div class="form-input container">
+                    <label for="mail-title">Subject</label>
+                    <input type="text" id="mail-title" name="mail-title" required>
+                </div>
+                <br>
+                <div class="form-area container">
+                    <label for="">Contents</label>
+                    <textarea rows="4" name="contents" required></textarea>
+                </div>
+                <div class="form-rating text-center">
+                    <label for="rating">How do you like my site?</label>
+                    <select name="rating" id="rating">
+            <option value="I Like it" selected>I like it</option>
+            <option value="It's OK">It's OK</option>
+            <option value="Hate it">Hate it</option>
+        </select>
+                </div>
+                <div class="mail-button">
+                <button class="btn btn-primary" type="submit">Send</button>
+            <a href="/"><button class="btn btn-secondary" type="button">Cancel</button></a>
+            </div>
+            </form>
+            {% block message %}
+            {% endblock %}
+            </div>
+        </div>
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>

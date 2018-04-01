@@ -1,0 +1,8 @@
+{% extends "mailform.html" %}
+{% block message %}
+{% if error %}
+<p class="mail-message text-center">{{ error }}</p>
+{% else %}
+<p class="mail-message text-center">{{ success }}</p>
+{% endif %}
+{% endblock %}

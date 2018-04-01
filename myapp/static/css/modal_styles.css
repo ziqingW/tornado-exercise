@@ -8,12 +8,13 @@
     margin-top: 10%;
     width: 80%;
     max-width: 500px;
-    height: 60%;
+    height: 70%;
     max-height: 400px;
 }
 .chat-container{
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 .chat-title {
     color: #4286f4;
@@ -32,7 +33,7 @@
 
 h4 {
     text-shadow: 1px 1px 1px white;
-    font-size: 1.2em;
+    font-size: 1.4em;
     color: #ce4125;
 }
 

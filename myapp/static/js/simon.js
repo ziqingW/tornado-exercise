@@ -10,10 +10,10 @@ $(document).ready(function(){
   var seq=0;
   var loop;
   var crazy=0;
-  var gsd=new Audio("/static/sounds/simonSound1.mp3");
-  var rsd=new Audio("/static/sounds/simonSound2.mp3");
-  var ysd=new Audio("/static/sounds/simonSound3.mp3");
-  var bsd=new Audio("/static/sounds/simonSound4.mp3");
+  var gsd=new Audio("/static/sounds/xsimonSound1.mp3");
+  var rsd=new Audio("/static/sounds/xsimonSound2.mp3");
+  var ysd=new Audio("/static/sounds/xsimonSound3.mp3");
+  var bsd=new Audio("/static/sounds/xsimonSound4.mp3");
  //random 
   function getRandom(min, max){
     min = Math.ceil(min);
@@ -45,11 +45,24 @@ $(document).ready(function(){
     ran=getRandom(1,5);
     list.push(ran);}
   }
-  //simon says
+  //fadeout the mp3
+  // function soundFadeOut(audio){
+  //   if (audio.volume > 0){
+  //       audio.volume -= 0.1;
+  //       setTimeout(soundFadeOut(audio), 10);
+  //   }else{
+  //     audio.pause()
+  //   }
+  // }
+  
+  
+  
+  // simon says
   function simonsay(key){
       if(key==1){
         gsd.load();
         gsd.play();
+        // soundFadeOut(gsd)
         blink("#greenb");
       }else if(key==2){
         rsd.load();
@@ -64,7 +77,7 @@ $(document).ready(function(){
         bsd.play();
         blink("#blueb");
       }
-       }
+      }
 //continous simon say
   function simon(){
     $("h3").html(loop);
@@ -85,6 +98,7 @@ $(document).ready(function(){
         blink(kk);
         snd.load();
         snd.play();
+        // soundFadeOut(snd)
       if(kk=="#greenb"){
         num=1;
       }else if(kk=="#redb"){

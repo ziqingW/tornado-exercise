@@ -1,6 +1,6 @@
 h1 {
   margin-top:10px;
-  font-family: Cursive;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-size: 3rem;
   color: orange;
 }
@@ -11,7 +11,7 @@ body {
 
 section {
   margin-top: 2rem;
-  font-family: Cursive;
+  font-family: sans-serif;
 }
 
 #search {
