@@ -8,7 +8,7 @@ Also you can send messages directly to my mailbox from the app.
 ## Apps in Bundle
 - **Tic-Tac-Toe**: A classical chess game made with JQuery
 - **Simon Game**: A retro game to test your responding made with JQuery
-- **Mini-Wiki**: A functional but tiny Wikipedia interface
+- **Mini-Wiki**: A functional but tiny Wikipedia interface made with JQuery
 - **Timzone Converter**: A useful tool to switch world-wide timezone for you, made with Python
 ___
 
